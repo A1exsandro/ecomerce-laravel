@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('enderecos', function (Blueprint $table) {
             $table->increments("id");
-            $table->string("logradouro");
-            $table->string("numero");
-            $table->string("cidade");
-            $table->string("estado");
-            $table->string("cep");
-            $table->string("complemento");
-            $table->string("usuario_id")->unsigned();
+            $table->string("logradouro", 50);
+            $table->string("numero", 4);
+            $table->string("cidade", 50);
+            $table->string("estado", 2);
+            $table->string("cep", 8);
+            $table->string("complemento", 50);
+            $table->integer("usuario_id")->unsigned();
             $table->timestamps();
 
             $table->foreign("usuario_id")
