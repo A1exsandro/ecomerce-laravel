@@ -15,9 +15,9 @@
       <a href="#" class="navbar-brand">MyShop</a>
       <div class="collapse navbar-collapse">
         <div class="navbar-nav">
-          <a href="#" class="nav-link">Home</a>
-          <a href="#" class="nav-link">Categorias</a>
-          <a href="#" class="nav-link">Cadastrar</a>
+          <a href="{{ route('home') }}" class="nav-link">Home</a>
+          <a href="{{ route('categoria') }}" class="nav-link">Categorias</a>
+          <a href="{{ route('cadastrar') }}" class="nav-link">Cadastrar</a>
         </div>
       </div>
 
