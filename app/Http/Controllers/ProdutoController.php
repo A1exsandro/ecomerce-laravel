@@ -58,4 +58,13 @@ class ProdutoController extends Controller
 
         return view("cart", $data);
     }
+
+    public function deleteCart($index, Request $request){
+        $cart = session('cart', []);
+        if(isset($cart[$index])){
+            unset($cart[$index]);
+        }
+        session(["cart" => $cart]);
+        return redirect()->route("show_cart");
+    }
 }

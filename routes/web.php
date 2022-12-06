@@ -21,3 +21,4 @@ Route::match(['get', 'post'], '/{idcategoria}/categoria', [ ProdutoController::c
 Route::match(['get', 'post'], '/register', [ ClienteController::class, 'index'])->name('register');
 Route::match(['get', 'post'], '/{idproduct}/cart/add', [ ProdutoController::class, 'addCart'])->name('add_cart');
 Route::match(['get', 'post'], '/cart', [ ProdutoController::class, 'showCart'])->name('show_cart');
+Route::match(['get', 'post'], '/{index}/deletecart', [ ProdutoController::class, 'deleteCart'])->name('delete_cart');
