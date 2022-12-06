@@ -53,6 +53,9 @@ class ProdutoController extends Controller
 
     public function showCart(Request $request){
         $cart = session('cart', []);
-        dd($cart);
+        // dd($cart);
+        $data = ['cart' => $cart];
+
+        return view("cart", $data);
     }
 }
