@@ -39,4 +39,20 @@ class ProdutoController extends Controller
         $data["idcategoria"] = $idcategoria;
         return view("categoria", $data);
     }
+
+    public function addCart($idproduct = 0, Request $request){
+        $prod = Produto::find($idproduct);
+
+        if($prod){
+            $cart = session('cart', []);
+            array_push($cart, $prod);
+            session(['cart' => $cart]);
+        }
+        return redirect()->route("home");
+    }
+
+    public function showCart(Request $request){
+        $cart = session('cart', []);
+        dd($cart);
+    }
 }

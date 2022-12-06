@@ -21,7 +21,7 @@
         </div>
       </div>
 
-      <a href="#" class="btn btn-sm"><i class="fa fa-shopping-cart"></i></a>
+      <a href="{{ route('show_cart') }}" class="btn btn-sm"><i class="fa fa-shopping-cart"></i></a>
     </nav>
 
     <div class="container">
