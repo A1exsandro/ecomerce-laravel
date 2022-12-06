@@ -22,7 +22,15 @@ class ClienteController extends Controller
         //dd($usuario);
 
         $endereco = new Endereco($values);
-        dd($endereco);
+        //dd($endereco);
+
+        try{
+            $usuario->save();
+            $endereco->usuario_id = $usuario->id;
+            $endereco->save();
+        }catch(\Exception $e){
+
+        }
 
         return redirect()->route("register");
     }

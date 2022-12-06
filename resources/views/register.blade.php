@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-6">
                     <div class="form-group">
-                        Nome: <input type="text" name="name" class="form-control">
+                        Nome: <input type="text" name="nome" class="form-control">
                     </div>
                 </div>
 
@@ -21,7 +21,7 @@
 
                 <div class="col-6">
                     <div class="form-group">
-                        Cpf: <input type="text" name="cpf" class="form-control">
+                        Login: <input type="text" name="login" class="form-control">
                     </div>
                 </div>
 
