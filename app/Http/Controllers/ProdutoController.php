@@ -22,8 +22,13 @@ class ProdutoController extends Controller
         $data = [];
 
         //SELECT * FROM categorias
-        //$listCategories
+        $listCategorias = Categoria::all();
 
+        //SELECT * FROM produtos limit 4
+        $listProducts = Produto::limit(4)->get();
+
+        // $data["list"] = $listProducts;
+        $data["listCategorias"] = $listCategorias;
         return view("categoria", $data);
     }
 }
