@@ -17,7 +17,7 @@
         <div class="navbar-nav">
           <a href="{{ route('home') }}" class="nav-link">Home</a>
           <a href="{{ route('categoria') }}" class="nav-link">Categorias</a>
-          <a href="{{ route('cadastrar') }}" class="nav-link">Cadastrar</a>
+          <a href="{{ route('register') }}" class="nav-link">Cadastrar</a>
         </div>
       </div>
 
