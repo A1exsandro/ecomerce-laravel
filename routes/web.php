@@ -17,4 +17,5 @@ use App\Http\Controllers\ClienteController;
 
 Route::match(['get', 'post'], '/', [ ProdutoController::class, 'index'])->name('home');
 Route::match(['get', 'post'], '/categoria', [ ProdutoController::class, 'categoria'])->name('categoria');
+Route::match(['get', 'post'], '/{idcategoria}/categoria', [ ProdutoController::class, 'categoria'])->name('categoria_by_id');
 Route::match(['get', 'post'], '/cadastrar', [ ClienteController::class, 'index'])->name('cadastrar');

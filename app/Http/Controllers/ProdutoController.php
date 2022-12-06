@@ -18,16 +18,23 @@ class ProdutoController extends Controller
         return view("home", $data);
     }
 
-    public function categoria(Request $request){
+    public function categoria($idcategoria = 0, Request $request){
         $data = [];
 
         //SELECT * FROM categorias
         $listCategorias = Categoria::all();
 
         //SELECT * FROM produtos limit 4
-        $listProducts = Produto::limit(4)->get();
+        $queryProduct = Produto::limit(4);
 
+        if($idcategoria != 0){
+            $queryProduct->where("categoria_id", $idcategoria);
+        }
+
+        $listProducts = $queryProduct->get();
+        
         // $data["list"] = $listProducts;
+        $data["list"] = $listProducts;
         $data["listCategorias"] = $listCategorias;
         return view("categoria", $data);
     }
